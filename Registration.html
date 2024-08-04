@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            
+            background-image: url("https://woorise.com/wp-content/uploads/2021/03/Online-event-registration.png");
+            font-family: Tahoma;
+            font-size: 16px;
+        }
+        h1, p {
+            
+            text-align: center;
+        }
+        form {
+            width: 60vw;
+            max-width: 500px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding-bottom: 2em;
+        }
+        fieldset {
+            border: none;   
+            background-image: url("https://images.ctfassets.net/co0pvta7hzrh/U7naGAUU8AroSP7R3koHv/7a4c8ab3868f74bb197c1069401aac26/pre-registration_form_template_Thumbnail.png");
+        }      
+        label {
+            display: block;
+            margin: 0.5rem 0;
+        }
+        input,textarea,select {
+            margin: 10px 0 0 0;
+            width: 100%;
+            min-height: 2em;
+        }
+        
+        .inline {
+            width: unset;
+            margin: 0 0.5em 0 0;
+            vertical-align: middle;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 40%;
+            margin: 1em auto;
+            height: 2em;
+            font-size: 1.1rem;
+            background-color: #f00b0b;
+            border-color: white;
+            min-width: 150px;
+        }
+        input[type="file"] {
+            padding: 1px 2px;
+        }
+        
+    </style>
+</head>
+<body>
+    <br>
+    <form>
+        <fieldset>
+            <h1>Registration Form</h1>
+            <p>Please fill out this form with the required information</p>
+            <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
+            <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
+            <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
+            <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
+            <label>Enter Your Email: <input type="email" name="email" required /></label>
+            <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+            <label>Upload your resume: <input type="file" name="file" /></label>
+            <label>Upload a profile picture: <input type="file" name="file" /></label>
+            <label>Date of Birth: <input type="date" /></label>
+            <label>How did you hear about us?
+                <select name="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">Linkedin</option>
+                    <option value="2">Naukari</option>
+                    <option value="3">Jobs Portal</option>
+                    <option value="4">Instagram</option>
+                    <option value="5">WhatsApp</option>
+                    <option value="6">Facebook</option>
+                </select>
+            </label>
+            <label>Bio:
+                <textarea name="bio" placeholder="About your skills and work experiences..."></textarea>
+            </label>
+            <label><input type="checkbox" name="terms" class="inline" required /> I accept the <a href="#">terms and conditions</a></label>
+            <input type="submit" value="Submit" />
+        </fieldset>  
+    </form>   
+</body>
+</html>
